@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Game Stonks S&L CryptoCurrency Exchange</title>
+    <!-- Meta -->
+    <meta name='viewport' content='user-scalable=no, width=device-width, initial-scale=1' />
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='mobile-web-app-capable' content='yes'>   
+
+   
+
+    <link rel='stylesheet' href='css/popstyles.css'>
+
+    <!-- jQuery -->
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>   
+    <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+    <script src='https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js'></script>
+
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css'>
+
+<!--
+    <link rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='https://www.roxorsoxor.com/gamestonks/css/slate/bootstrap.min.css'>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+-->
+
+
+    <!-- D3 -->
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <script src='https://d3js.org/d3-time-format.v2.min.js'></script>
+
+</head>
+
+
+
+
+<body>
+
+    <div class="container-fluid">
+
+	<div id="fluidCon">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+				<a class="navbar-brand" href="#">GameStonks S&L</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarColor01">
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/index.html'>Currencies<br>Stats
+							<!--
+								<span class="sr-only">(current)</span>
+							-->
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/currencies.html'>Currencies<br>All
+							<!--
+								<span class="sr-only">(current)</span>
+							-->
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/login.html'>LogIn</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/register.html'>Register</a>
+						</li>   
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/purchase-currency.html'>Purchase<br>Currency</a>
+						</li>  
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/sell-currency.html'>Sell<br>Currency</a>
+						</li>                                                
+						<li class="nav-item">
+							<a class="nav-link" href='https://roxorsoxor.com/gamestonks/dashboard.html'>Dashboard</a>
+						</li>    
+													
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href='https://www.marketaux.com'>MarketAux</a>
+								<a class="dropdown-item" href='https://www.thetie.io/integrations/'>The Tie</a>
+								<a class="dropdown-item" href='#'>Thing 3</a>
+								<a class="dropdown-item" href='#'>Thing 4</a>
+								<a class="dropdown-item" href='#'>Thing 5</a>
+								<a class="dropdown-item" href='#'>Thing 6</a>								
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</li>
+					</ul>
+
+				</div> <!-- end of collapse -->
+			</nav> <!-- end of navbar -->		
+		</div> <!-- end of fluidCon -->
+
+        <!-- D3 chart goes here -->
+		<h2>Currencies Traded at GameStonks S&L</h2>
+        <!--
+        <form action="https://api.coingecko.com/api/v3/simple/price?ids=binancecoin%2Cbinance-usd%2Cbitcoin%2Ccardano%2Cdogecoin%2Cethereum%2Cpolkadot%2Csolana%2Ctether%2Cusd-coin%2C&vs_currencies=usd&include_24hr_change=true&include_last_updated_at=true" method="get">
+
+        <input type="submit" name="fetchStats" value="Refresh Stats" />    
+        </form>            
+        -->
+		
+        <table class="table" id="currencyTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Symbol</th>
+					<th>Currency Name</th>				
+				</tr>	
+			</thead>
+			<tbody>
+
+				<!--
+					I need a WHILE LOOP HERE
+												<?php
+
+												while ($row = mysqli_fetch_array($getit)) {
+													// $artistSpotID = $row["artistSpotID"];
+													$artistName = $row["artistName"];
+													$artistPop = $row["pop"];
+													$lastFMDate = $row[ "dataDate" ];
+													$artistFollowers = $row["followers"];
+													$popDate = $row["date"];
+													$popDateShort = substr($popDate, 0, 10);
+												?>
+				-->
+		
+			<tr>
+				<td>ID goes here</td>
+				<td>Symbol</td>
+				<td>Name</td>
+			</tr>
+			</tbody>
+        </table>
+
+
+    </div> <!-- close container -->
+    
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+	<script src="js/fetchSimplePrice.js"></script>
+
+</body>
+
+</html>
